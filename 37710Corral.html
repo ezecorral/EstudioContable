@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Estudio Contable </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="main">
+
+<div class="main2">
+  <div id="bienvenido">
+      <div class="main3">
+          <div id="fecha"></div>
+          <div> <h1><img src="Wellcome.jpg"></h1></div>
+          <div id="clima">  </div>
+      </div>
+    </div>
+    <p><marquee id="marquesina">Bienvenid@ al Estudio Contable Online, no dejes de loguearte para ingresar a todas las funciones contables...</marquee></p>
+          <div id="divInicioUsuario"> 
+          
+            <h3>Iniciar sesión</h3>
+          <form id="consultaUsuario">
+          <p><input name="nombreCliente" id="nombreCliente" type="text" placeholder="Usuario"></input> 
+          <p><input name="CUITingreso" id="CUITingreso" type="number" placeholder="CUIT"></input>   
+            <p><input class="btn" type="submit" value="Iniciar Sesión"style="
+              border: 1px solid #00a5f1; /*anchura, estilo y color borde*/
+              padding: 5px; /*espacio alrededor texto*/
+              background-color: #c6e5f1; /*color botón*/
+              color: #303030; /*color texto*/
+              font-family: 'Arial', sans-serif; /*tipografía texto*/
+              border-radius: 50px; /*bordes redondos*/
+              :hover: 
+                background-color: #f1f4f5;  
+
+              
+              "> </input> 
+              </div>  
+              <div id="UsuarioActualCSS"><output name="resultConsulta" id="resultConsulta" type="text"></output> 
+              
+              </div>
+              
+                
+          </form> 
+
+
+          <div id="botonDesloguear" style="display: none">
+            <p><button id="desloguear"style="
+              border: 1px solid #00a5f1; /*anchura, estilo y color borde*/
+              padding: 5px; /*espacio alrededor texto*/
+              background-color: #c6e5f1; /*color botón*/
+              color: #303030; /*color texto*/
+              font-family: 'Arial', sans-serif; /*tipografía texto*/
+              border-radius: 50px; /*bordes redondos*/
+              :hover: 
+                background-color: #f1f4f5;  
+
+              
+              ">Cerrar sesión</button> 
+
+            </div>
+          <div id="botonRegistro">
+          <button id="abrirRegistro"style="
+          border: 1px solid #00a5f1; /*anchura, estilo y color borde*/
+          padding: 5px; /*espacio alrededor texto*/
+          background-color: #c6e5f1; /*color botón*/
+          color: #303030; /*color texto*/
+          font-family: 'Arial', sans-serif; /*tipografía texto*/
+          border-radius: 50px; /*bordes redondos*/
+          :hover: 
+            background-color: #f1f4f5;  
+
+          
+          ">Registrarse</button>
+          </div>
+        </tr>
+
+      <tr>
+      <div id="divRegistroUsuario" style="display: none">
+        
+      <p> <h3>Registro de usuario</h3>
+      <form id="formRegistro">
+      <p><input name="primerNombre" id="primerNombre" type="text" placeholder="Nombre"></input> 
+      <p><input name="apellido" id="apellido" type="text" placeholder="Apellido"></input> 
+      <p><input name="email" id="email" type="email" placeholder="E-mail"></input> 
+      <p><input name="cuit" id="cuit" type="number" placeholder="CUIT"></input> 
+      <p><input type="submit" value="Enviar este formulario"style="
+        border: 1px solid #00a5f1; /*anchura, estilo y color borde*/
+        padding: 5px; /*espacio alrededor texto*/
+        background-color: #c6e5f1; /*color botón*/
+        color: #303030; /*color texto*/
+        font-family: 'Arial', sans-serif; /*tipografía texto*/
+        border-radius: 50px; /*bordes redondos*/
+        :hover: 
+          background-color: #f1f4f5;  
+
+        
+        "> </input>
+
+        <p><p><output name="resultUser" id="resultUser" type="text"></input>  
+        </div>
+        </form>
+        </tr>
+
+
+
+        
+        
+
+        
+   
+
+      </table>
+
+      <div id="cargaFacturas" style="display: none">    
+        <h3>Cargar nueva facturas</h3>
+      <form id="cargaFactura">
+      
+      <p>Tipo de factura: <select name="tipoFacturaCarga" id="tipoFacturaCarga" type="text" placeholder="Tipo de factura">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select> 
+      <p><input name="numeroFacturaCarga" id="numeroFacturaCarga" type="number" placeholder="Número de factura"></input> 
+      <p><input name="montoFacturaCarga" id="montoFacturaCarga" type="number" placeholder="Monto de factura"></input> 
+      <p><input name="observacionFacturaCarga" id="observacionFacturaCarga" type="text" placeholder="Observación"></input> 
+
+
+        <p><input class="btn" type="submit" value="Agregar factura"style="
+          border: 1px solid #00a5f1; /*anchura, estilo y color borde*/
+          padding: 5px; /*espacio alrededor texto*/
+          background-color: #c6e5f1; /*color botón*/
+          color: #303030; /*color texto*/
+          font-family: 'Arial', sans-serif; /*tipografía texto*/
+          border-radius: 50px; /*bordes redondos*/
+          :hover: 
+            background-color: #f1f4f5;  
+  
+          
+          "> </input>
+
+  <p><input class="btn" type="button" id="btnCalcularTotal" value="Calcular monto total de facturas"style="
+  border: 1px solid #00a5f1; /*anchura, estilo y color borde*/
+  padding: 5px; /*espacio alrededor texto*/
+  background-color: #c6e5f1; /*color botón*/
+  color: #303030; /*color texto*/
+  font-family: 'Arial', sans-serif; /*tipografía texto*/
+  border-radius: 50px; /*bordes redondos*/
+  :hover: 
+    background-color: #f1f4f5;  
+
+    
+  "> </input>
+  
+      <p><p><output name="resultadoCargaFactura" id="resultadoCargaFactura" type="text"></input>  
+      </form>
+      </div>
+
+      <div id="CalcularTotal"></div>
+      <p><main id="facturas-cargadas">
+             
+        
+      </main>
+
+
+  <p></p>
+  <div id="calculoIVA" style="display: none">    
+    <h3>Calculo de IVA</h3>
+<form id="formIVA">
+  <p><input name="ventasIn" id="ventasIn" type="number" placeholder="Suma de ventas"></input> 
+  <p><input name="comprasIn" id="comprasIn" type="number" placeholder="Suma de compras"></input> 
+  <p><input name="saldoFavorIn" id="saldoFavorIn" type="number" placeholder="Saldo a favor"></input> 
+  <p><input name="saldoContraIn" id="saldoContraIn" type="number" placeholder="Saldo en contra"></input> 
+  <p><input name="tipoIVAIn" id="tipoIVAIn" type="number" placeholder="Porcentaje de IVA"></input> 
+   
+
+  
+
+
+    <p><input class="btn" type="submit" value="Calcular saldo a pagar!"style="
+      border: 1px solid #00a5f1; /*anchura, estilo y color borde*/
+      padding: 5px; /*espacio alrededor texto*/
+      background-color: #c6e5f1; /*color botón*/
+      color: #303030; /*color texto*/
+      font-family: 'Arial', sans-serif; /*tipografía texto*/
+      border-radius: 50px; /*bordes redondos*/
+      :hover: 
+        background-color: #f1f4f5;  
+
+      "> </input>
+  <p><p><output name="resultIVA" id="resultIVA" type="number"></input>  
+  </form>
+</div>
+</div>
+
+<script src="Timer.js" type="module"></script>
+<script src="37710Corral.js" type="module"></script> 
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"></body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script>
+</html>
+
